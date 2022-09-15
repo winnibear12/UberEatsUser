@@ -1,7 +1,7 @@
 import {View, Text, Image, FlatList, StyleSheet} from 'react-native';
 import restaurants from'../../../assets/data/restaurants.json';
 import{Ionicons} from "@expo/vector-icons";
-import DishListItem from '../../components/DishItem';
+import DishListItem from '../../components/DishListItem';
 import styles from "./styles"
 
 const restaurant = restaurants[0];

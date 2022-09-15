@@ -1,6 +1,6 @@
 import { View, Text, Image,FlatList } from 'react-native'
 import React from 'react'
-import DishListItem from '../../components/DishItem'
+import DishListItem from '../../components/DishListItem'
 
 import orders from '../../../assets/data/orders.json'
 import restaurants from "../../../assets/data/restaurants.json"
