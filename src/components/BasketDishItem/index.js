@@ -12,10 +12,10 @@ const BasketDishItem = ({basketDish}) => {
         
         <View style={styles.row}>
             <View style ={styles.quantityContainer}>
-            <Text>1</Text>
+            <Text>{basketDish.quantity}</Text>
            </View>
-            <Text style={{fontweight:"600"}}>{basketDish.name}</Text>
-            <Text style={{marginLeft:"auto"}}>${basketDish.price}</Text>
+            <Text style={{fontweight:"600"}}>{basketDish.Dish.name}</Text>
+            <Text style={{marginLeft:"auto"}}>${basketDish.Dish.price}</Text>
             </View>
 
     );
