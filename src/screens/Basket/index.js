@@ -5,14 +5,21 @@ import {useState} from 'react';
 import BasketDishItem from '../../components/BasketDishItem';
 import { useBasketContext } from '../../contexts/BasketContext';
 import {useOrderContext} from '../../contexts/OrderContext';
-
+import {useNavigation} from "@react-navigation/native";
 
 // const restaurant = restaurants[0];
+
 
 
 const Basket = () => {
     const {restaurant, basketDishes,totalPrice} = useBasketContext();
     const {createOrder} = useOrderContext();
+    const navigation = useNavigation();
+
+    const onCreateOrder = async () => {
+        await createOrder();
+        navigation.goBack();
+    };
 
     return(
         <View style={styles.page}>
@@ -28,7 +35,7 @@ const Basket = () => {
     
             <View style = {styles.separator}/>
 
-            <Pressable onPress={createOrder} style={styles.button}>
+            <Pressable onPress={onCreateOrder} style={styles.button}>
                 <Text style={styles.buttonText}> Create order &#8226; ${totalPrice.toFixed(2)} </Text>
             </Pressable>
         </View>
